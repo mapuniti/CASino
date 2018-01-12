@@ -8,7 +8,7 @@
   <div class="login box">
     <%= render 'messages' %>
     <div class="logo">
-       <%= image_tag "logo.png" %>
+       <%= image_tag "mapunity_logo_large.png" %>
     </div>
 
     <div class="form">
@@ -24,6 +24,8 @@
         <% end %>
         <%= button_tag t('login.label_button'), :class => 'button' %>
       <% end %>
+      <%= link_to "Sign up", new_registration_path("user") %><br />
+      <%= link_to "Forgot your password?", new_password_path("user") %><br />
     </div>
   </div>
   <%= render 'footer' %>
