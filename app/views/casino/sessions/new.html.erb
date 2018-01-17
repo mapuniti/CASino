@@ -24,8 +24,9 @@
         <% end %>
         <%= button_tag t('login.label_button'), :class => 'button' %>
       <% end %>
-      <%= link_to "Sign up", new_registration_path("user") %><br />
-      <%= link_to "Forgot your password?", new_password_path("user") %><br />
+      <% target = params[:service] ? "_blank" : "" %>
+      <%= link_to "Sign up", new_registration_path("user"), target: target %><br />
+      <%= link_to "Forgot your password?", new_password_path("user"), target: target %><br />
     </div>
   </div>
   <%= render 'footer' %>
